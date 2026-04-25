@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub:*)",
+      "Read(//mnt/c/Users/ADMIN/random/**)",
+      "Bash(dir \"C:\\\\\\\\Users\\\\\\\\ADMIN\\\\\\\\random\\\\\\\\hustle\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); clients=d.get\\('client',[]\\); [print\\('oauth_clients:', c.get\\('oauth_client',[]\\)\\) for c in clients]\")",
+      "Bash(flutter analyze:*)",
+      "WebSearch",
+      "Bash(keytool -list -keystore \"C:/Users/ADMIN/random/hustle/android/app/hustle-release.jks\")",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(set PYTHONIOENCODING=utf-8)",
+      "Bash(findstr /V \"^$\")",
+      "Bash(dart run:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/search.py \"freelancer productivity SaaS dashboard mobile\" --design-system -p \"Hustle\")",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/search.py \"animation loading accessibility touch\" --domain ux)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/search.py \"mobile dashboard layout\" --stack flutter)"
+    ]
+  }
+}
