@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '528425901588',
     projectId: 'my-hustle-id0',
     storageBucket: 'my-hustle-id0.firebasestorage.app',
+    androidClientId: '528425901588-q24kf1cfat4vueeefsi4vda7pgvh6hsl.apps.googleusercontent.com',
+    iosClientId: '528425901588-645lrlbi3ror93bljefb1d3d8isatle9.apps.googleusercontent.com',
     iosBundleId: 'com.solopro.hustle',
   );
 
@@ -72,6 +74,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '528425901588',
     projectId: 'my-hustle-id0',
     storageBucket: 'my-hustle-id0.firebasestorage.app',
+    androidClientId: '528425901588-q24kf1cfat4vueeefsi4vda7pgvh6hsl.apps.googleusercontent.com',
+    iosClientId: '528425901588-645lrlbi3ror93bljefb1d3d8isatle9.apps.googleusercontent.com',
     iosBundleId: 'com.solopro.hustle',
   );
 
@@ -83,4 +87,5 @@ class DefaultFirebaseOptions {
     authDomain: 'my-hustle-id0.firebaseapp.com',
     storageBucket: 'my-hustle-id0.firebasestorage.app',
   );
+
 }
