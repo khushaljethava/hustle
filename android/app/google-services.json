@@ -1,49 +1,42 @@
 {
   "project_info": {
-    "project_number": "528425901588",
-    "project_id": "my-hustle-id0",
-    "storage_bucket": "my-hustle-id0.firebasestorage.app"
+    "project_number": "858207230897",
+    "project_id": "hustle-12f07",
+    "storage_bucket": "hustle-12f07.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:528425901588:android:9c980d97759726c9ed5101",
+        "mobilesdk_app_id": "1:858207230897:android:d42224063a93cd8503bb90",
         "android_client_info": {
           "package_name": "com.solopro.hustle"
         }
       },
       "oauth_client": [
         {
-          "client_id": "528425901588-uclqqeqd3eoknfoak47lgktngl4dfh7f.apps.googleusercontent.com",
+          "client_id": "858207230897-semlh7i20tovl7r7o32vru3sjc2aqrr7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.solopro.hustle",
-            "certificate_hash": "1844101445e4d4ae5909358a442823fcc7a8b64c"
+            "certificate_hash": "2d44c00fff1c9f615f97a73bc4ed4198ea5eb838"
           }
         },
         {
-          "client_id": "528425901588-mgvvhi50rjeqvukdu43q7omcllkrrrv2.apps.googleusercontent.com",
+          "client_id": "858207230897-pib9rkg12kt547p7hmg0leog9lobpaiu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBMd31ZxYmNKEI-fqoj44Y8yADsh42rpRs"
+          "current_key": "AIzaSyDOFA5TKbKir0qlCZ-h_fYfdeTFBQ7WevY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "528425901588-mgvvhi50rjeqvukdu43q7omcllkrrrv2.apps.googleusercontent.com",
+              "client_id": "858207230897-7qee538nptopat0mgbp92n9dovsqpu8b.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "528425901588-645lrlbi3ror93bljefb1d3d8isatle9.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.solopro.hustle"
-              }
             }
           ]
         }

@@ -24,9 +24,14 @@ class AuthUnauthenticated extends AuthState {}
 
 class AuthError extends AuthState {
   final String message;
+  // Technical detail for diagnosing production failures (e.g. the
+  // PlatformException.code + details). Surfaced on the login screen via
+  // a "Copy" SnackBarAction so testers can report the real error code
+  // without needing adb logcat.
+  final String? diagnostic;
 
-  const AuthError(this.message);
+  const AuthError(this.message, {this.diagnostic});
 
   @override
-  List<Object?> get props => [message];
+  List<Object?> get props => [message, diagnostic];
 }

@@ -29,10 +29,17 @@ import 'presentation/screens/splash/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (Firebase.apps.isEmpty) {
+  // On Android the google-services Gradle plugin auto-initializes the
+  // default Firebase app before main() runs. Firebase.apps.isEmpty does
+  // not always reflect that in time, so we attempt initializeApp and
+  // tolerate [core/duplicate-app] — the existing default app is the one
+  // we want.
+  try {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+  } on FirebaseException catch (e) {
+    if (e.code != 'duplicate-app') rethrow;
   }
 
   await SystemChrome.setPreferredOrientations([
