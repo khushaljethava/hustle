@@ -1,11 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show Clipboard, ClipboardData;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../blocs/auth/auth_bloc.dart';
 import 'signup_screen.dart';
-import 'widgets/google_sign_in_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -84,39 +82,16 @@ class _LoginScreenState extends State<LoginScreen> {
       listenWhen: (_, current) => current is AuthError,
       listener: (context, state) {
         if (state is AuthError) {
-          final messenger = ScaffoldMessenger.of(context);
-          final diag = state.diagnostic;
-          messenger
+          ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(
               SnackBar(
-                content: Text(
-                  diag == null ? state.message : '${state.message}\n$diag',
-                ),
+                content: Text(state.message),
                 backgroundColor: AppTheme.errorColor,
                 behavior: SnackBarBehavior.floating,
-                duration: Duration(seconds: diag == null ? 4 : 12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                action: diag == null
-                    ? null
-                    : SnackBarAction(
-                        label: 'Copy',
-                        textColor: Colors.white,
-                        onPressed: () {
-                          Clipboard.setData(ClipboardData(text: diag));
-                          messenger
-                            ..hideCurrentSnackBar()
-                            ..showSnackBar(
-                              const SnackBar(
-                                content: Text('Diagnostic copied'),
-                                behavior: SnackBarBehavior.floating,
-                                duration: Duration(seconds: 2),
-                              ),
-                            );
-                        },
-                      ),
               ),
             );
         }
@@ -229,10 +204,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       );
                     },
                   ),
-                  const SizedBox(height: 24),
-                  _OrDivider(),
-                  const SizedBox(height: 24),
-                  const GoogleSignInButton(),
                   const SizedBox(height: 32),
                   _SignUpLink(),
                 ],
@@ -270,27 +241,6 @@ class _BrandIcon extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class _OrDivider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Expanded(child: Divider()),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            'or',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppTheme.onSurfaceMutedLight,
-                ),
-          ),
-        ),
-        const Expanded(child: Divider()),
-      ],
     );
   }
 }

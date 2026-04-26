@@ -91,6 +91,7 @@ class ProService {
   /// Called on sign-out so RevenueCat returns to anonymous mode.
   Future<void> logOut() async {
     try {
+      if (await Purchases.isAnonymous) return;
       await Purchases.logOut();
     } catch (e) {
       debugPrint('[ProService] logOut error: $e');

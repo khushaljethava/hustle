@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../blocs/auth/auth_bloc.dart';
-import 'widgets/google_sign_in_button.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -292,10 +291,6 @@ class _SignupScreenState extends State<SignupScreen> {
                       );
                     },
                   ),
-                  const SizedBox(height: 24),
-                  _OrDivider(),
-                  const SizedBox(height: 24),
-                  const GoogleSignInButton(),
                   const SizedBox(height: 32),
                   _SignInLink(),
                 ],
@@ -304,27 +299,6 @@ class _SignupScreenState extends State<SignupScreen> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class _OrDivider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Expanded(child: Divider()),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            'or',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppTheme.onSurfaceMutedLight,
-                ),
-          ),
-        ),
-        const Expanded(child: Divider()),
-      ],
     );
   }
 }
